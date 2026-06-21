@@ -1,0 +1,4 @@
+songs/
+
+__pycache__/
+*.mp3
