@@ -38,9 +38,14 @@ DB_PATH   = BASE_DIR / "db" / "fingerprint_db.pkl"
 # ─────────────────────────────────────────────
 app = FastAPI(title="Zapp — Audio Fingerprinting API", version="1.0")
 
+ALLOWED_ORIGINS = os.getenv(
+    "ALLOWED_ORIGINS",
+    "*"   # overridden by the env var you set on Render after deploy
+).split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   # tighten in production
+    allow_origins=ALLOWED_ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
 )
