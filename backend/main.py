@@ -48,6 +48,7 @@ app.add_middleware(
     allow_origins=["https://zapp-beqhtmwuv-iitk-raj.vercel.app",
                    "https://zapp-beige.vercel.app"
                    "https://zapp-h667op1fv-iitk-raj.vercel.app"] + ALLOWED_ORIGINS,
+    allow_origin_regex=r"https://zapp-.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

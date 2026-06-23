@@ -2,7 +2,7 @@
 
 import { useState, useRef, DragEvent } from "react";
 
-const API = "http://localhost:8000";
+const API = "https://zapp-production-be5d.up.railway.app";
 
 export default function BatchPage() {
   const [files, setFiles] = useState<File[]>([]);
