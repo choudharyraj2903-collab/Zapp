@@ -45,7 +45,9 @@ ALLOWED_ORIGINS = os.getenv(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://zapp-beqhtmwuv-iitk-raj.vercel.app"] + ALLOWED_ORIGINS,
+    allow_origins=["https://zapp-beqhtmwuv-iitk-raj.vercel.app",
+                   "https://zapp-beige.vercel.app"
+                   "https://zapp-h667op1fv-iitk-raj.vercel.app"] + ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
