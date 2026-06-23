@@ -9,7 +9,10 @@ import ConstellationChart from "./components/ConstellationChart";
 import HistogramChart from "./components/HistogramChart";
 import ResultsTable from "./components/ResultsTable";
 
-const API = process.env.NEXT_PUBLIC_API_URL   // set per-environment
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
+const API = API_URL;
+ // set per-environment
 
 interface IdentifyResult {
   matched_song: string | null;
