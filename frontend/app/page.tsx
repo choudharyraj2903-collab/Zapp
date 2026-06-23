@@ -9,7 +9,7 @@ import ConstellationChart from "./components/ConstellationChart";
 import HistogramChart from "./components/HistogramChart";
 import ResultsTable from "./components/ResultsTable";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_URL = "https://zapp-production-be5d.up.railway.app" ;
 
 const API = API_URL;
  // set per-environment
